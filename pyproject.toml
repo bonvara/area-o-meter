@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "area-o-meter"
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["meter"]
