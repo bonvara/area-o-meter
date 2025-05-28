@@ -4,5 +4,5 @@ include = ["meter/*.py", "tests/*.py"]
 
 [lint]
 select = ["ALL"]
-ignore = ["D213", "D203"]
+ignore = ["D213", "D203", "D100"]
 pydocstyle.convention = "google"

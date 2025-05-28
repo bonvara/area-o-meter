@@ -1,5 +1,7 @@
 """Area-o-meter."""
 
-from .area import BaseShape, Circle, Triangle
+from meter.protocols import HasArea
+from meter.shapes import Circle, Triangle
+from meter.utils import are_equiareal
 
-__all__ = ["BaseShape", "Circle", "Triangle"]
+__all__ = ["Circle", "HasArea", "Triangle", "are_equiareal"]
