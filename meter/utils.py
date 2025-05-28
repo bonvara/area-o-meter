@@ -1,6 +1,6 @@
 import math
 
-from meter.protocols import HasArea
+from .protocols import HasArea
 
 
 def are_equiareal(shape1: HasArea, shape2: HasArea) -> bool:

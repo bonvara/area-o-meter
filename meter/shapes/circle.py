@@ -7,7 +7,13 @@ class Circle(HasArea):
     """Circle class."""
 
     def __init__(self, radius: float) -> None:
-        """Initialize the circle with a radius."""
+        """Initialize the circle with a radius.
+
+        Raises ValueError if radius is negative.
+        """
+        if radius < 0:
+            msg = "Radius must be non-negative."
+            raise ValueError(msg)
         self.radius = radius
 
     def get_area(self) -> float:
