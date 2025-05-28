@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import math
 
 
-class Shape(ABC):
+class BaseShape(ABC):
     """Abstract shape class."""
 
     @abstractmethod
@@ -11,7 +11,7 @@ class Shape(ABC):
         pass
 
 
-class Circle(Shape):
+class Circle(BaseShape):
     """Circle class."""
 
     def __init__(self, radius: float) -> None:
@@ -23,7 +23,7 @@ class Circle(Shape):
         return math.pi * self.radius**2
 
 
-class Triangle(Shape):
+class Triangle(BaseShape):
     """Triangle with sorted sides."""
 
     def __init__(self, a: float, b: float, c: float) -> None:
@@ -39,6 +39,24 @@ class Triangle(Shape):
         return math.sqrt(p * (p - a) * (p - b) * (p - c))
 
     def is_right(self) -> bool:
-        """Check if the triangle is right-angled."""
+        """Use Pythagorean theorem with default tolerance to check if the triangle is right-angled."""
         a, b, c = self.sides
         return math.isclose(a**2 + b**2, c**2)
+
+
+def are_equiareal(shape1: BaseShape, shape2: BaseShape) -> bool:
+    """Check if two shapes have the same area, within default tolerance."""
+    return math.isclose(shape1.get_area(), shape2.get_area())
+
+
+## Debugging
+my_circle = Circle(1.38197659788)
+my_triangle = Triangle(3, 4, 5)
+
+print(are_equiareal(my_circle, my_triangle))
+
+print(type(my_circle))
+print(type(my_triangle))
+
+print(isinstance(my_circle, BaseShape))
+print(isinstance(my_triangle, BaseShape))
