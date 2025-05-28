@@ -9,10 +9,10 @@ dynamic = ["version"]
 [tool.setuptools]
 packages = ["meter"]
 
-[tool.ruff]
+# [tool.ruff]
 # lint.select = ["E", "F", "D", "ANN"]  # E: PEP8, F: pyflakes, D: docstrings, ANN: type annotations
 # lint.ignore = ["D100", "D104"]  # Optional: ignore missing docstrings for modules, etc.
-line-length = 88
+# line-length = 88
 
-[tool.ruff.lint.pydocstyle]
-convention = "google"
+# [tool.ruff.pydocstyle]
+# convention = "google"

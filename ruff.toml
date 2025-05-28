@@ -1,0 +1,8 @@
+line-length = 79
+target-version = "py313"
+include = ["meter/*.py", "tests/*.py"]
+
+[lint]
+select = ["ALL"]
+ignore = ["D213", "D203"]
+pydocstyle.convention = "google"
