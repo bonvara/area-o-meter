@@ -1,24 +1,39 @@
 # Area-o-meter
 A test project. A library to calculate areas of geometric shapes.
-## Usage
-Download the wheel from "Releases" page.
-Install:
-`pip install path/to/distribution/area_o_meter-X.X.X-py3-none-any.whl`
-Use:
+## Use
+1. Download the wheel from "Releases": https://github.com/bonvara/area-o-meter/releases
+2. Install:  
+```
+pip install path/to/distribution/area_o_meter-X.X.X-py3-none-any.whl
+```
+3. Use:  
 ```
 from meter.shapes.circle import Circle
 from meter.shapes.triangle import Triangle
 from meter.utils import are_equiareal
 ```
-## Development
-Install dev dependencies:
-`pip install -r requirements-dev.txt`
-Lint:
-`ruff check`
-Test:
-`pytest`
-Build:
-`python -m build --wheel`
+## Develop
+Create and activate a virtual envirinment:
+```
+python -m venv .venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+```
+Install dev dependencies: 
+```
+pip install -r requirements-dev.txt
+```
+Lint:  
+```
+ruff check
+```  
+Test:  
+```
+pytest
+```  
+Build:  
+```
+python -m build --wheel
+```
 ## Features
 ## Requirements and considerations
 - Make a Python library for computation of the area of triangles and circles
