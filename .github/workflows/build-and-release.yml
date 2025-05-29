@@ -3,14 +3,14 @@ name: Build and Release on Tag
 on:
   push:
     tags:
-      - 'v*'  # Trigger only on version tags like v0.1.0
+      - 'v*'
 
 jobs:
   build-release:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Needed to create GitHub Releases
+      contents: write
 
     steps:
       - name: Checkout code
