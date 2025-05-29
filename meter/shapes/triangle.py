@@ -8,7 +8,14 @@ class Triangle(HasArea):
 
     def __init__(self, a: float, b: float, c: float) -> None:
         """Iitialize the triangle's sides as a sorted tuple."""
-        self.sides = sorted([a, b, c])
+        a, b, c = sorted([a, b, c])
+        if a + b < c:
+            msg = (
+                f"Invalid triangle sides: {a}, {b}, {c} do not satisfy the "
+                "triangle inequality."
+            )
+            raise ValueError(msg)
+        self.sides = (a, b, c)
 
     def get_area(self) -> float:
         """Calculate the area of the triangle."""

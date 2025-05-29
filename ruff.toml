@@ -6,3 +6,6 @@ include = ["meter/*.py", "tests/*.py"]
 select = ["ALL"]
 ignore = ["D213", "D203", "D100"]
 pydocstyle.convention = "google"
+
+[lint.per-file-ignores]
+"tests/**/*.py" = ["D103", "S101", "ANN"]

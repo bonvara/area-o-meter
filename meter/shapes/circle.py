@@ -6,15 +6,15 @@ from meter.protocols import HasArea
 class Circle(HasArea):
     """Circle class."""
 
-    def __init__(self, radius: float) -> None:
+    def __init__(self, r: float) -> None:
         """Initialize the circle with a radius.
 
         Raises ValueError if radius is negative.
         """
-        if radius < 0:
+        if r < 0:
             msg = "Radius must be non-negative."
             raise ValueError(msg)
-        self.radius = radius
+        self.radius = r
 
     def get_area(self) -> float:
         """Calculate the area of the circle."""
