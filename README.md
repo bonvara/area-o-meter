@@ -1,5 +1,5 @@
 # Area-o-meter
-A test project. A library to calculate areas of geometric shapes.
+Test project. A library to calculate areas of geometric shapes.
 ## Use
 1. Download the wheel from "Releases": https://github.com/bonvara/area-o-meter/releases
 2. Install:  
@@ -34,7 +34,6 @@ Build:
 ```
 python -m build --wheel
 ```
-## Features
 ## Requirements and considerations
 - Make a Python library for computation of the area of triangles and circles
 - Intended for distributing to the company's clients
