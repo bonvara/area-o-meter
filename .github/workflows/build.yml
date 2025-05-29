@@ -1,10 +1,6 @@
-name: Build Package
+name: Build and Publish Package
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -32,3 +28,10 @@ jobs:
       - name: Show build artifacts
         run: |
           ls -lh dist/
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*.whl
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
