@@ -34,3 +34,8 @@ def test_triangle_degenerate():
 def test_triangle_invalid():
     with pytest.raises(ValueError, match="Invalid"):
         Triangle(1, 2, 4)
+
+
+def test_triangle_invalid_side_length():
+    with pytest.raises(ValueError, match="non-negative."):
+        Triangle(1, -2, 3)

@@ -9,6 +9,9 @@ class Triangle(HasArea):
     def __init__(self, a: float, b: float, c: float) -> None:
         """Iitialize the triangle's sides as a sorted tuple."""
         a, b, c = sorted([a, b, c])
+        if a < 0:
+            msg = "Side lengths must be non-negative."
+            raise ValueError(msg)
         if a + b < c:
             msg = (
                 f"Invalid triangle sides: {a}, {b}, {c} do not satisfy the "
